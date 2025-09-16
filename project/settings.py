@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 if os.getenv('ALLOWED_HOSTS'):
     ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
-
+AUTH_USER_MODEL='core.User'
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'core',
 ]
 
 MIDDLEWARE = [

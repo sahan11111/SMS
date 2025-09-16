@@ -10,4 +10,7 @@ class User(AbstractUser):
         ('student', 'Student'),
         ('parent', 'Parent'),
     ]
-    role = models.CharField(max_length=20, choices=ROLE_CHOICES)
+    role = models.CharField(max_length=20, choices=ROLE_CHOICES ,default='student')
+    email=models.EmailField(unique=True)
+    
+    
